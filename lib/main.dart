@@ -505,7 +505,10 @@ class _MyHomePageState extends State<MyHomePage> {
             //   ),
             // ))
 
-            Center(
+            SizedBox.expand(
+              child: Container(
+                decoration: BoxDecoration(gradient: LinearGradient(colors: [Color.fromARGB(223, 2, 225, 255),(Color.fromARGB(70, 129, 222, 241))],begin: Alignment.bottomCenter,end: Alignment.topCenter)),
+                child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -610,7 +613,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: TextButton(
                   onPressed: () {},
                   style: TextButton.styleFrom(
-                    backgroundColor: Colors.black, // Button color
+                    backgroundColor: Colors.blueGrey, // Button color
                     padding: EdgeInsets.symmetric(
                         vertical: 16.0,
                         horizontal:
@@ -634,22 +637,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                    margin: EdgeInsets.symmetric(vertical: 30, horizontal: 5),
                     child: Image.asset("assets/images/facebook.png",
                         height: 50, width: 50),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                    margin: EdgeInsets.symmetric(vertical: 30, horizontal: 5),
                     child: Image.asset("assets/images/instagram.png",
                         height: 50, width: 50),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                    margin: EdgeInsets.symmetric(vertical: 30, horizontal: 5),
                     child: Image.asset("assets/images/youtube.png",
                         height: 50, width: 50),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                    margin: EdgeInsets.symmetric(vertical: 30, horizontal: 5),
                     child: Image.asset("assets/images/twitter.png",
                         height: 50, width: 50),
                   )
@@ -657,6 +660,9 @@ class _MyHomePageState extends State<MyHomePage> {
               )
             ],
           ),
-        ));
+        ),
+              ),
+            )
+            );
   }
 }
